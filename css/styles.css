@@ -2,6 +2,15 @@ body {
   background-color: #FF00E3
 }
 
+main {
+  background-color: #FF7700;
+  min-height: 450px;
+
+}
 .nav-item {
   color: #666420
+}
+
+.nav-link {
+  color: #2CFF00
 }
