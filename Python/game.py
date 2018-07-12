@@ -63,8 +63,8 @@ while running and user.isAlive():
             print("greedy scum")
         random.seed(seed + str(x) + str(y))
         if random.randint(1, 5) == 1:
-            print("Another flashlight to add to your set.")
             user.addItem(item.getRandomItem())
+            print("Ayy, there's something on the ground.")
         else:
             print("Nope")
         searched_tiles.append(tile.seed)
@@ -75,13 +75,13 @@ while running and user.isAlive():
             command = input("Combat > ")
             if command == "attack":
                 if random.randint(1,5) < 5:
-                    print("You gottem!")
+                    print("You gottem! You hit for 3 damage.")
                     tile.enemy.health -= 3
                 else:
                     print("You missed! How could you miss!? That's like missing the broad side of ten barns!")
             elif command == "spell":
                 if random.randint(1,5) == 1:
-                    print ("What an awesome kill!")
+                    print ("What an awesome kill! You did 10 damage.")
                     tile.enemy.health -= 10
                 else:
                     print ("You don't know how to spell.")
