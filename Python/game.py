@@ -1,4 +1,4 @@
-import location, player, item, enemy
+import location, player, item, enemy, weapon
 import random
 from datetime import datetime
 seed = input("I request a seed from you: ")
@@ -90,7 +90,7 @@ while running and user.isAlive():
                 if user.hasItem(item):
                     print("You have attacked the enemy with the {}.".format(item))
                     user.weapon(item)
-                    tile.enemy.health -= item.damage(item)
+                    tile.enemy.health -= item.item()
                 else:
                     print("You don't have that LUL")
                     continue

@@ -41,4 +41,4 @@ class Player:
         if self.hasItem(name):
             for item in items.items:
                 if item.name == name:
-                    return items.damage(items)
+                    return items.items.damage()
