@@ -35,4 +35,10 @@ class Player:
         if self.hasItem(name):
             for item in items.items:
                 if item.name == name:
-                    self.health+= item.healing
+                    self.health += item.healing
+
+    def weapon(self,name):
+        if self.hasItem(name):
+            for item in items.items:
+                if item.name == name:
+                    return items.damage(items)

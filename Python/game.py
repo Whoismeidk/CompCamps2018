@@ -3,7 +3,6 @@ import random
 from datetime import datetime
 seed = input("I request a seed from you: ")
 
-
 tile = location.Location(seed + "0,0")
 
 user = player.Player(input("What is your name?: "))
@@ -85,6 +84,17 @@ while running and user.isAlive():
                     tile.enemy.health -= 10
                 else:
                     print ("You don't know how to spell.")
+
+            elif command.startswith("weapon"):
+                _, item = command.split(" ", 1)
+                if user.hasItem(item):
+                    print("You have attacked the enemy with the {}.".format(item))
+                    user.weapon(item)
+                    tile.enemy.health -= item.damage(item)
+                else:
+                    print("You don't have that LUL")
+                    continue
+
             if tile.enemy.health > 0:
                 user.health -= tile.enemy.damage
     elif command.startswith("use"):
@@ -92,6 +102,6 @@ while running and user.isAlive():
         if user.hasItem(item):
             print("You have eaten the {}".format(item))
             user.use(item)
-            user.removeItem("Potion")
+            user.removeItem(item)
         else:
             print("You don't have {}s".format(item))

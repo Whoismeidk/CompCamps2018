@@ -22,6 +22,7 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .center {
@@ -38,4 +39,9 @@ main {
     margin-right: 40%;
     width: 50%;
     text-align: center;
+}
+
+.img-fluid{
+  width: 400px;
+  height: 250px;
 }
